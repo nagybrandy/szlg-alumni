@@ -38,10 +38,10 @@ export default function AuthPage() {
                 <img src="/logo.svg" alt="Logo" className="size-1/4" />
               </div>
             </div>
-            <Typography variant="h1" className="text-[#4E4E4E]  text-[50px] text-center" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+            <Typography variant="h1" className="text-[#4E4E4E]  text-[50px] text-center">
               Üdv újra!
             </Typography>
-            <Typography variant="h4" className="uppercase text-[#818181] text-center text-md"  placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+            <Typography variant="h4" className="uppercase text-[#818181] text-center text-md">
               Jó látni téged!
             </Typography>
           </div>
