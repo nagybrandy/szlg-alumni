@@ -3,11 +3,11 @@ import { Pokemon } from "../page";
 
 export function PokeCard({ pokemon }: { pokemon: Pokemon }) {
     return (
-        <Card className="w-64 overflow-hidden" color="transparent" shadow={false} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+        <Card className="w-64 overflow-hidden" color="white" shadow={false} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             <CardHeader
                 floated={false}
                 shadow={false}
-                color="transparent"
+                color="white"
                 className="m-0 rounded-none"
                 placeholder=""
                 onPointerEnterCapture={() => {}}

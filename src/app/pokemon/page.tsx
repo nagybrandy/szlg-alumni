@@ -55,7 +55,7 @@ export default function PokemonPage() {
           <Typography variant="h3" color="blue-gray" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             REST API Fetch
           </Typography>
-          <div className="flex flex-wrap flex-grow justify-around w-full sm:w-3/5 gap-y-4">
+          <div className="flex flex-wrap flex-grow justify-around w-full sm:w-3/5 gap-y-4 mt-5">
               {pokemonList.map((pokemon) => (
                   <PokeCard key={pokemon.id} pokemon={pokemon} />
               ))}
