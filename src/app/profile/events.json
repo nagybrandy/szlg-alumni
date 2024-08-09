@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "title": "Event 1",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, excepturi facilis. Obcaecati sequi reiciendis nisi, laudantium amet fugiat tempora exercitationem, distinctio quaerat est rem atque deserunt eaque consequuntur, nostrum quibusdam? Quos obcaecati vel odit alias. Rerum, accusamus alias, eos, veniam doloremque enim cum quos quidem sit totam accusantium nisi dignissimos? Alias officia voluptatem repellat quis optio ipsum earum perferendis at! Debitis necessitatibus quas mollitia, inventore voluptas nisi qui! Sequi facilis voluptatibus quas fugiat maxime. Repellat quaerat velit tempora rerum ipsa vero eveniet, modi perspiciatis praesentium totam consectetur dolor, unde officia!",
+        "type": "udvar.jpg",
+        "author": "John Doe",
+        "date": "2022-01-01",
+        "author_profile": "/avatar-placeholder.png"
+    }
+]
