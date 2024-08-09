@@ -6,7 +6,7 @@ export const BlogContainer = ({
     children: React.ReactNode;
 }>) => {
     return (
-        <div className='flex flex-col space-y-5 mt-10 overflow-y-scroll p-10 h-screen'>
+        <div className='flex flex-col space-y-16 mt-10 overflow-y-scroll p-10 h-screen'>
             {children}
         </div>
     )
