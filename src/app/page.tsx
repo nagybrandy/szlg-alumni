@@ -17,7 +17,6 @@ export default function Home() {
             <BlogCard key={index} {...post} />
           ))}
         </BlogContainer>
-        
       </div>
     </main>
   )
