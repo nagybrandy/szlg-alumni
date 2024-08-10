@@ -7,12 +7,17 @@ export default function SearchPage() {
     const [hideFilt, setHideFilt] = useState(true);
     return (
         <>
-            <div className="flex">
-                <div className="overflow-y-auto h-10000px w-10/12 rounded bg-[#D2F0CB] px-5 py-2.5 mt-5">
-                    <UsersContainer />
-                </div>
-                <div className="w-2/12">
-                    <div className="relative inline-block text-left mt-5 ml-2">
+            <div className="h-screen w-screen absolute left-0 top-5">
+                <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 z-10 pointer-events-none" />
+                <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
+            </div>
+            <div className="w-8/12 mx-auto bg-[#FCFFF8] h-screen p-5 rounded-[5em] pb-[200px] mt-32 flex flex-col text-center relative z-0">
+                <div className="inline-flex inline-fill">
+                    <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-32" role="menuitem" id="name-filt" placeholder="Név"></input>
+                    <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-32" role="menuitem" id="year-filt" placeholder="Kezdő év"></input>
+                    <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-32" role="menuitem" id="class-filt" placeholder="Osztály"></input>
+                    <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-32" role="menuitem" id="job-filt" placeholder="Állás"></input>
+                    {/* <div className="relative inline-block text-left mt-5 ml-2">
                         <div>
                             <button onClick={() => setHideFilt(!hideFilt)} type="button" className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
                                 Szűrő
@@ -29,7 +34,10 @@ export default function SearchPage() {
                                 <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-52" role="menuitem" id="job-filt" placeholder="Állás"></input>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+                </div>
+                <div className="overflow-y-auto h-full rounded  px-5 py-2.5 mt-5">
+                    <UsersContainer />
                 </div>
 
             </div>
