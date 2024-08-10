@@ -11,7 +11,7 @@ interface FormData {
   type: string;
 }
 
-function Page() {
+export default function Page() {
   const [formData, setFormData] = useState<FormData>({
     postcim: '',
     postleiras: '',
@@ -138,5 +138,3 @@ function Page() {
     </main>
   );
 }
-
-export default Page;
