@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
-
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 import { SimpleRegistrationForm } from "./components/LoginForms";
+import { useAuthTokenMutation } from "@/store/services/apiSlice";
+import { useEffect } from "react";
 
 export default function AuthPage() {
   return (
