@@ -5,6 +5,7 @@ import { BlogContainer } from "../components/BlogContainer";
 import { useGetPostsMutation } from "@/store/services/apiSlice.js";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
+import theme from "@material-tailwind/react/theme";
 
 export default function Home() {
   const [getPosts, { data, isLoading, error }] = useGetPostsMutation();
@@ -12,8 +13,12 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchPosts() {
+      const theToken = localStorage.getItem("token");
+
       try {
-        const result = await getPosts({}).unwrap();
+        const result = await getPosts({
+          token: theToken ? theToken : undefined,
+        }).unwrap();
 
         // Create a shallow copy of the result array and then sort it
         const sortedPosts = [...result].sort((a: { date: string }, b: { date: string }) =>  new Date(a.date).getTime() - new Date(b.date).getTime()).reverse();
