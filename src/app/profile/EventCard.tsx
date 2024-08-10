@@ -1,6 +1,5 @@
 'use client';
-import React from 'react'
-import { Avatar } from '../components/Avatar';
+import React from 'react';
 
 export const EventCard = (props:any) => {
     console.log(props)
