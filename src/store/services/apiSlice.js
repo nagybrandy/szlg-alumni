@@ -79,7 +79,7 @@ export const apiSlice = createApi({
       }) => ({
         url: `get-user/${userId}/`,
         method: 'POST',
-        body: token,
+        body: {token},
       }),
     }),
 
