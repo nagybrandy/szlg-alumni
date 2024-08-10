@@ -25,6 +25,7 @@ export default function LandingPage() {
           <p className="italic text-green-900 mb-7" >
             Találd meg volt osztálytársaidat, barátaidat a gimnázium öregdiákjainak fejlesztett platformon! Oszd meg velük, mit csinálsz most, és mi történt veled azóta, valamint kövesd az igazgatóság által közzétett híreket!
           </p>
+<<<<<<< Updated upstream
           <div className="flex space-x-4 z-20 ">
             <Link href="/register">
               <SignUpButton />
@@ -33,6 +34,22 @@ export default function LandingPage() {
               <SignInButtonLanding />
             </Link>
           </div>
+=======
+          {!localStorage.getItem("token") ? (
+
+            <div className="flex space-x-4 z-20 ">
+              <Link href="/auth">
+                <SignUpButton />
+              </Link>
+              <Link href="/auth">
+                <SignInButtonLanding />
+              </Link>
+            </div>) : 
+            <Link href="/news" className="z-[9999]">        
+            <button className="rounded-lg border-2 bg-green-500 hover:bg-green-600 border-green-600 w-[100%] h-9 text-[#D2F0CB] font-bold uppercase text-center text-sm px-2">
+              <span>Tovább a hírekhez</span>
+            </button></Link>}
+>>>>>>> Stashed changes
         </div>
         {/* Right Side: Image */}
         <div className="w-1/2 flex justify-center items-center">

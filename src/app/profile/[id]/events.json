@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Új munkahely itt: Cég Kft.",
+        "content": "Loredeleniti laudantium odio? Quia atque saepe ab tempora?",
+        "type": "udvar.jpg",
+        "author": "John Doe",
+        "date": "2022-01-01",
+        "author_profile": "/avatar-placeholder.png"
+    },
+    {
+        "id": 1,
+        "title": "Gyermekem született!",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem optio unde magni quod saepe blanditiis officia deserunt deleniti laudantium odio? Quia atque saepe ab tempora?",
+        "type": "udvar.jpg",
+        "author": "John Doe",
+        "date": "2022-01-01",
+        "author_profile": "/avatar-placeholder.png"
+    }
+]

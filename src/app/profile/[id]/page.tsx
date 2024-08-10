@@ -14,15 +14,14 @@ export default function ProfilePage() {
     useEffect(() => {
         async function fetchMe() {
             try {
-                const result = await getMe({token: localStorage.getItem('token')}).unwrap();
+                const result = await getMe({}).unwrap();
                 setFetchedMe(result); // Assuming the result contains an array
-                console.log("Fetched posts:", result);
             } catch (error) {
                 console.error("Failed to fetch posts:", error);
             }
         }
     fetchMe();
-    }, []);
+    }, [getMe]);
     return (
         <div className="flex flex-col bg-[#3A6F3E] relative">
             {/* Circle with Hello text */}
@@ -31,17 +30,17 @@ export default function ProfilePage() {
             </div>
             <div className='text-black text-2xl z-[9999] absolute top-0 left- p-4 flex flex-col'>
                 <div className='flex flex-row'>
-                    <img src={fetchedMe.profile_picture} alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4 rounded-full object-cover' />
+                    <img src="/home_logo.png" alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4' />
                     <div className='flex flex-col'>
                         {/*Insert name */}
-                        <h1 className='mt-1 font-bold'>{fetchedMe.last_name + " " + fetchedMe.first_name}</h1>
+                        <h1 className='mt-1 font-bold'>Név Névovics</h1>
                         {/*Insert job */}
-                        <p className='text-lg text-gray-700'>{fetchedMe.job}</p>
+                        <p className='text-lg text-gray-700'>Foglalkozás</p>
                         <div className='flex flex-row pt-2'>
                             {/*Insert class */}
-                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>{fetchedMe.class_section}</p>
+                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>E</p>
                             {/*Insert start and end date */}
-                            <p className='m-auto pl-3 rounded-full border-white text-xl'>{fetchedMe.class_start_year} - {fetchedMe.class_end_year}</p>
+                            <p className='m-auto pl-3 rounded-full border-white text-xl'>2020 - 2024</p>
                         </div>
                     </div>
                 </div>
