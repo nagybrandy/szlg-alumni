@@ -23,7 +23,7 @@ export default function Menu() {
                 <a href="/igazgato_post" className=" flex justify-end align-center">
                     <PostIcon />
                 </a>
-                <a href="/igazgato_post" className=" flex justify-end align-center">
+                <a href="/news" className=" flex justify-end align-center">
                     <NewsIcon />
                 </a>
 

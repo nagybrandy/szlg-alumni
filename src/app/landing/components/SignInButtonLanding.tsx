@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
 import IconContainer from "@/app/components/IconContainer";
-=======
-'use client'
-import IconContainer from "./IconContainer";
->>>>>>> Stashed changes
 
 export const SignInButtonLanding = () => {
     return (
