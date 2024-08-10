@@ -23,10 +23,10 @@ export default function LandingPage() {
             Köszöntjük
           </h1>
           <p className="italic text-green-900 mb-7" >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In recusandae quos quisquam expedita magni repellat, nobis autem quo voluptas maiores, porro libero nam facere. Mollitia modi cupiditate corporis vel sunt.
+            Találd meg volt osztálytársaidat, barátaidat a gimnázium öregdiákjainak fejlesztett platformon! Oszd meg velük, mit csinálsz most, és mi történt veled azóta, valamint kövesd az igazgatóság által közzétett híreket!
           </p>
           <div className="flex space-x-4 z-20 ">
-            <Link href="/auth">
+            <Link href="/register">
               <SignUpButton />
             </Link>
             <Link href="/auth">
