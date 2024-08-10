@@ -3,25 +3,27 @@ import events from './events.json';
 import { EventCard } from './EventCard';
 import Timeline from './Timeline';
 import { Avatar } from '@material-tailwind/react';
-import { useGetMeMutation } from "@/store/services/apiSlice.js";
+import { useGetSingleUserMutation } from "@/store/services/apiSlice.js";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 
 export default function ProfilePage() {
-    const [getMe, { data, isLoading, error }] = useGetMeMutation();
-    const [fetchedMe, setFetchedMe] = useState([]);
+    const [getSingleUser, { data, isLoading, error }] = useGetSingleUserMutation();
+    const [fetchedUser, setFetchedUser
+    ] = useState([]);
 
     useEffect(() => {
-        async function fetchMe() {
+        async function fetchUser() {
             try {
-                const result = await getMe({}).unwrap();
-                setFetchedMe(result); // Assuming the result contains an array
+                const result = await getSingleUser({ userId: '2', token: localStorage.getItem("token")}).unwrap();
+                setFetchedUser(result);
+                console.log("Fetched user:", result);
             } catch (error) {
-                console.error("Failed to fetch posts:", error);
+                console.error("Failed to fetch user:", error);
             }
         }
-    fetchMe();
-    }, [getMe]);
+        fetchUser();
+    }, []);
     return (
         <div className="flex flex-col bg-[#3A6F3E] relative">
             {/* Circle with Hello text */}
@@ -30,17 +32,17 @@ export default function ProfilePage() {
             </div>
             <div className='text-black text-2xl z-[9999] absolute top-0 left- p-4 flex flex-col'>
                 <div className='flex flex-row'>
-                    <img src="/home_logo.png" alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4' />
+                    <img src={fetchedUser.profile_picture} alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4 rounded-full object-cover' />
                     <div className='flex flex-col'>
                         {/*Insert name */}
-                        <h1 className='mt-1 font-bold'>Név Névovics</h1>
+                        <h1 className='mt-1 font-bold'>{fetchedUser.last_name + " " + fetchedUser.first_name}</h1>
                         {/*Insert job */}
-                        <p className='text-lg text-gray-700'>Foglalkozás</p>
+                        <p className='text-lg text-gray-700'>{fetchedUser.job}</p>
                         <div className='flex flex-row pt-2'>
                             {/*Insert class */}
-                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>E</p>
+                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>{fetchedUser.class_section}</p>
                             {/*Insert start and end date */}
-                            <p className='m-auto pl-3 rounded-full border-white text-xl'>2020 - 2024</p>
+                            <p className='m-auto pl-3 rounded-full border-white text-xl'>{fetchedUser.class_start_year} - {fetchedUser.class_end_year}</p>
                         </div>
                     </div>
                 </div>

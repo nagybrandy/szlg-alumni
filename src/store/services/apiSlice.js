@@ -71,6 +71,18 @@ export const apiSlice = createApi({
       }),
     }),
 
+    // GetSingleUser
+    getSingleUser: builder.mutation({
+      query: ({
+        userId,
+        token,
+      }) => ({
+        url: `get-user/${userId}/`,
+        method: 'POST',
+        body: token,
+      }),
+    }),
+
     // DeletePost
     deletePost: builder.mutation({
       query: (postData) => ({
@@ -90,5 +102,6 @@ export const {
   useGetUsersMutation,
   useGetMeMutation,
   useGetPostsMutation,
+  useGetSingleUserMutation,
   useDeletePostMutation,
 } = apiSlice;
