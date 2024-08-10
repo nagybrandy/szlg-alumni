@@ -7,19 +7,10 @@ export default function SearchPage() {
     const [hideFilt, setHideFilt] = useState(true);
     return (
         <>
-<<<<<<< Updated upstream
             <div className="flex">
                 <div className="overflow-y-auto h-10000px w-10/12 rounded bg-[#D2F0CB] px-5 py-2.5 mt-5">
                     <UsersContainer />
                 </div>
-=======
-            <div className="h-screen w-screen absolute left-0 top-5">
-                <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 z-10 pointer-events-none" />
-                <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
-            </div>
-            <div className="w-8/12 mx-auto bg-[#FCFFF8] h-screen p-5 rounded-[5em] pb-[200px] mt-32 flex flex-col text-center relative z-0">
-
->>>>>>> Stashed changes
                 <div className="w-2/12">
                     <div className="relative inline-block text-left mt-5 ml-2">
                         <div>
