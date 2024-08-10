@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { SignUpButton } from "../components/SignUpButton";
 import { SignInButtonLanding } from "../components/SignInButtonLanding";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -21,13 +22,13 @@ export default function LandingPage() {
           <h1 className="text-green-800 font-bold text-4xl text-center mb-5">
             Köszöntjük
           </h1>
-          <div className="flex space-x-4">
-            <a href="/auth">
+          <div className="flex space-x-4 z-20">
+            <Link href="/auth">
               <SignUpButton />
-            </a>
-            <a href="/auth">
+            </Link>
+            <Link href="/auth">
               <SignInButtonLanding />
-            </a>
+            </Link>
           </div>
         </div>
         {/* Right Side: Image */}
