@@ -93,7 +93,7 @@ function Form({ onSubmit }: FormProps) {
               <label htmlFor="postcim" className="text-gray-800 font-semibold">Adja meg a címet:</label>
               <br />
               <input
-                className="rounded-xl text-gray-700 focus:outline-green-100 border-green-50 w-full bg-green-50"
+                className="rounded-xl p-3 text-gray-700 focus:outline-green-100 border-green-50 w-full bg-green-50"
                 type="text"
                 name="postcim"
                 id="cim"
@@ -107,7 +107,7 @@ function Form({ onSubmit }: FormProps) {
               <label className="w-full text-gray-800 font-semibold" htmlFor="postleiras">Adja meg a leírást:</label>
               <br />
               <textarea
-                className="focus:outline-green-100 rounded-xl w-full bg-green-50 text-gray-700 placeholder:text-gray-500 placeholder:italic"
+                className="focus:outline-green-100 rounded-xl p-3 w-full bg-green-50 text-gray-700 placeholder:text-gray-500 placeholder:italic"
                 name="postleiras"
                 id="leiras"
                 placeholder="Kezdjen el írni..."
@@ -121,7 +121,7 @@ function Form({ onSubmit }: FormProps) {
               <label className="w-full text-gray-800 font-semibold" htmlFor="postlink">Adja meg a kép linkjét (url):</label>
               <br />
               <input
-                className="text-gray-700 focus:outline-green-100 rounded-xl w-full bg-green-50"
+                className="text-gray-700 focus:outline-green-100 rounded-xl p-3 w-full bg-green-50"
                 type="text"
                 name="postlink"
                 id="link"
@@ -133,7 +133,7 @@ function Form({ onSubmit }: FormProps) {
 
             <button
               type="submit"
-              className="m-5 drop-shadow-md bg-green-500 hover:bg-green-700 rounded-xl p-2 px-10 text-green-50 font-semibold"
+              className="m-5 drop-shadow-md bg-green-500 hover:bg-green-700 rounded-xl p-3 p-2 px-10 text-green-50 font-semibold"
               disabled={isLoading}
             >
               {isLoading ? "Feltöltés..." : "Feltöltés"}

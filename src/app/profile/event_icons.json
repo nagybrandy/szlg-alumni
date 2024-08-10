@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "event_name": "Gyerek születés",
+        "code": "GY",
+        "icon": "./child_icon.png"
+    },
+    {
+        "id": 1,
+        "event_name": "Munkahely váltás",
+        "code": "MH",
+        "icon": "./job_icon.png"
+    }
+]

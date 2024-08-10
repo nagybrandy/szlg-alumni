@@ -19,6 +19,7 @@ export default function Menu() {
             <div className="w-1/3 flex justify-end items-center space-x-5">
                 <a href="/igazgato_post" className=" flex justify-end align-center">
                 <PostIcon/>
+                <NewsIcon />
                 </a>
                 <NotificationsIcon />
                 <a href="/profile">

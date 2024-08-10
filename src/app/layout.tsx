@@ -4,6 +4,7 @@ import "./globals.css";
 import Menu from "./Menu";
 import Providers from "./Providers";
 import React from "react";
+import MenuNSI from "./MenuNSI";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
   const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
   // Generate 100 circles with random properties
-  const circles = Array.from({ length: 100 }, (_, i) => {
+  const circles = Array.from({ length: 200 }, (_, i) => {
     const size = randomInt(50, 100); // Fixed circle size between 50px and 100px
     const duration = randomInt(20, 60); // Animation duration between 20s and 60s
     const delay = randomInt(0, 30); // Animation delay between 0s and 30s
@@ -70,7 +71,7 @@ export default function RootLayout({
           {circles}
         </div>
         <Providers>
-          <Menu />
+          <MenuNSI />
           <div className="-mt-3 z-[-1]">
             {children}
           </div>

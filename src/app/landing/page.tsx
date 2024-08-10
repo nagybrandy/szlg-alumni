@@ -16,7 +16,7 @@ export default function LandingPage() {
           className="absolute select-none mix-blend-lighten opacity-25 z-20 pointer-events-none"
         />
       </div>
-      <div className="w-[75%] bg-[#FCFFF8] absolute top-20 bottom-0 p-5 rounded-3xl flex">
+      <div className="w-[75%] bg-[#FCFFF8] absolute bottom-0 p-5 rounded-t-[10em] flex align-middle h-[90vh]">
         {/* Left Side: Text and Buttons */}
         <div className="w-1/2 flex flex-col justify-center items-center">
           <h1 className="text-green-800 font-bold text-4xl text-center mb-5">
