@@ -4,6 +4,7 @@ import "./globals.css";
 import Menu from "./Menu";
 import Providers from "./Providers";
 import React from "react";
+import MenuNSI from "./MenuNSI";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,7 +71,7 @@ export default function RootLayout({
           {circles}
         </div>
         <Providers>
-          <Menu />
+          <MenuNSI />
           <div className="-mt-3 z-[-1]">
             {children}
           </div>
