@@ -20,7 +20,7 @@ export default function SearchPage() {
                     <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="year-filt" placeholder="Évfolyam"></input>
                     <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="class-filt" placeholder="Osztály"></input>
                     <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="job-filt" placeholder="Állás"></input>
-                    <div className="ml-3 mt-3">
+                    <div className="ml-3 mt-3 pb-4">
                         <Link href="">
                             <SearchButtonSearch />
                         </Link>
