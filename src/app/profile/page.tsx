@@ -28,10 +28,25 @@ export default function ProfilePage() {
             <div className="bg-[#D2F0CB] rounded-full w-[50rem] h-[50rem] absolute left-0 top-0 -translate-x-[25%] -translate-y-[70%]  flex items-center justify-center z-[30]">
                
             </div>
-            <div className='text-black text-2xl z-[9999] absolute top-0 left- p-5'>
-                    <img src="./home_icon" alt="aaaaaaaaaaaaaaaaaaa" />
-                    <h1>Hello</h1>
+            <div className='text-black text-2xl z-[9999] absolute top-0 left- p-4 flex flex-col'>
+                <div className='flex flex-row'>
+                    <img src="/home_logo.png" alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4' />
+                    <div className='flex flex-col'>
+                        <h1 className='mt-1 font-bold'>Név Névovics</h1>
+                        <p className='text-lg'>Foglalkozás</p>
+                        <div className='flex flex-row pt-2'>
+                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>E</p>
+                            <p className='m-auto pl-3 rounded-full border-white'>2020 - 2024</p>
+                        </div>
+                    </div>
                 </div>
+                <div className='text-black text-2xl z-[9999] absolute top-0 left- p-4 flex flex-row'>
+                    <img src="" alt="Facebook" className=''/>
+                    <img src="" alt="Instagram" />
+                    <img src="" alt="Twitter" />
+                    <img src="" alt="LinkedIn" />
+                </div>
+            </div>
             {/* Background circles */}
             <div className="h-screen w-screen absolute pt-48 z-[10]">
                 <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 pointer-events-none" />
