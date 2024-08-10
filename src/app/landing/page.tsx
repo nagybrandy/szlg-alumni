@@ -16,7 +16,7 @@ export default function LandingPage() {
           className="absolute mix-blend-lighten opacity-25 z-20 pointer-events-none"
         />
       </div>
-      <div className="w-[75%] bg-[#FCFFF8] h-[75%] p-5 rounded-2xl flex">
+      <div className="w-[75%] bg-[#FCFFF8] absolute top-20 bottom-0 p-5 rounded-3xl flex">
         {/* Left Side: Text and Buttons */}
         <div className="w-1/2 flex flex-col justify-center items-center">
           <h1 className="text-green-800 font-bold text-4xl text-center mb-5">
@@ -37,10 +37,10 @@ export default function LandingPage() {
         {/* Right Side: Image */}
         <div className="w-1/2 flex justify-center items-center">
           <Image
-            src="/udvar.jpg"
-            alt="Udvar"
-            width={400}
-            height={300}
+            src="/hero.png"
+            alt=""
+            width={500}
+            height={400}
             className="rounded-2xl"
           />
         </div>
