@@ -46,10 +46,10 @@ export const apiSlice = createApi({
 
     // GetUsers
     getUsers: builder.mutation({
-      query: (token) => ({
+      query: (body) => ({
         url: 'get-users/',
         method: 'POST',
-        body: token,
+        body: body,
       }),
     }),
 
