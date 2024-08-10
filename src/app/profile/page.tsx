@@ -25,13 +25,28 @@ export default function ProfilePage() {
     return (
         <div className="flex flex-col bg-[#3A6F3E] relative">
             {/* Circle with Hello text */}
-            <div className="bg-[#D2F0CB] rounded-full w-[50rem] h-[50rem] absolute left-0 top-0 -translate-x-[25%] -translate-y-[70%]  flex items-center justify-center z-[30]">
+            <div className="bg-[#D2F0CB] rounded-full w-[45rem] h-[45rem] absolute left-0 top-0 -translate-x-[25%] -translate-y-[66%]  flex items-center justify-center z-[30]">
                
             </div>
-            <div className='text-black text-2xl z-[9999] absolute top-0 left- p-5'>
-                    <img src="./home_icon" alt="aaaaaaaaaaaaaaaaaaa" />
-                    <h1>Hello</h1>
+            <div className='text-black text-2xl z-[9999] absolute top-0 left- p-4 flex flex-col'>
+                <div className='flex flex-row'>
+                    <img src="/home_logo.png" alt="aaaaaaaaaaaaaaaaaaa" className='w-20 h-20 mx-4' />
+                    <div className='flex flex-col'>
+                        <h1 className='mt-1 font-bold'>Név Névovics</h1>
+                        <p className='text-lg text-gray-700'>Foglalkozás</p>
+                        <div className='flex flex-row pt-2'>
+                            <p className='w-10 h-10 rounded-full bg-green-900 text-center pt-1 text-white'>E</p>
+                            <p className='m-auto pl-3 rounded-full border-white text-xl'>2020 - 2024</p>
+                        </div>
+                    </div>
                 </div>
+                <div className='flex flex-row pt-3 space-x-4 ml-14'>
+                    <img src="" alt="Facebook" className='max-w-12'/>
+                    <img src="" alt="Instagram" className='max-w-12 mt-3'/>
+                    <img src="" alt="Twitter" className='max-w-12 mt-3'/>
+                    <img src="" alt="LinkedIn" className='max-w-12'/>
+                </div>
+            </div>
             {/* Background circles */}
             <div className="h-screen w-screen absolute pt-48 z-[10]">
                 <img src="/circles.svg" className="absolute select-none mix-blend-lighten opacity-100 pointer-events-none" />
@@ -39,7 +54,7 @@ export default function ProfilePage() {
 
             {/* White section with text */}
             <div className="bg-[#FCFFF8] h-32 flex flex-row w-full rounded-2xl relative z-[10]">
-                <div className="w-3/5"></div>
+                <div className="w-1/2"></div>
                 <p className="text-justify my-auto w-full pr-16 text-sm text-[#607D8B]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt varius viverra. Suspendisse auctor lorem id pulvinar convallis. Mauris at blandit eros. Nunc ultrices lorem turpis, et tincidunt mi pharetra non. Integer fermentum mauris ut lacus ullamcorper volutpat. Etiam vel nulla magna. Nam a risus quam. Cras tempor consequat venenatis. Donec mollis iaculis odio,
                 </p>
