@@ -22,7 +22,10 @@ export default function LandingPage() {
           <h1 className="text-green-800 font-bold text-4xl text-center mb-5">
             Köszöntjük
           </h1>
-          <div className="flex space-x-4 z-20">
+          <p className="italic text-green-900 mb-7" >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In recusandae quos quisquam expedita magni repellat, nobis autem quo voluptas maiores, porro libero nam facere. Mollitia modi cupiditate corporis vel sunt.
+          </p>
+          <div className="flex space-x-4 z-20 ">
             <Link href="/auth">
               <SignUpButton />
             </Link>
