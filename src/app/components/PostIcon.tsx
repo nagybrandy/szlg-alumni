@@ -3,7 +3,7 @@ import { SearchIcon } from "./SearchIcon";
 
 export const PostIcon = () => {
     return (
-        <button className="p-3 gap-x-2 rounded-xl  h-8  uppercase flex justify-center items-center">
+        <button className="gap-x-2 rounded-xl  h-8  uppercase flex justify-center items-center">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24.6365 12 25.247 12.2529 25.6971 12.7029C26.1471 13.153 26.4 13.7635 26.4 14.4V21.6H33.6C34.2365 21.6 34.847 21.8529 35.2971 22.3029C35.7471 22.753 36 23.3635 36 24C36 24.6365 35.7471 25.247 35.2971 25.6971C34.847 26.1471 34.2365 26.4 33.6 26.4H26.4V33.6C26.4 34.2365 26.1471 34.847 25.6971 35.2971C25.247 35.7471 24.6365 36 24 36C23.3635 36 22.753 35.7471 22.3029 35.2971C21.8529 34.847 21.6 34.2365 21.6 33.6V26.4H14.4C13.7635 26.4 13.153 26.1471 12.7029 25.6971C12.2529 25.247 12 24.6365 12 24C12 23.3635 12.2529 22.753 12.7029 22.3029C13.153 21.8529 13.7635 21.6 14.4 21.6H21.6V14.4C21.6 13.7635 21.8529 13.153 22.3029 12.7029C22.753 12.2529 23.3635 12 24 12V12Z" fill="#388E3C"/>
             </svg>

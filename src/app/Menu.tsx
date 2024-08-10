@@ -5,11 +5,8 @@ import { PeopleIcon } from "./components/PeopleIcon";
 import { SearchIcon } from "./components/SearchIcon";
 import { SearchButton } from "./components/SearchButton";
 import { PostIcon } from "./components/PostIcon";
-<<<<<<< HEAD
 import { LogoutIcon } from "./components/LogoutIcon";
-=======
 import Link from "next/link";
->>>>>>> 288960223776e8a03a9d50fa05fb68ad1b6a269a
 
 export default function Menu() {
     return (
@@ -25,15 +22,11 @@ export default function Menu() {
 
              
                 <a href="/igazgato_post" className=" flex justify-end align-center">
-<<<<<<< HEAD
                 <LogoutIcon/>
 
                 <PostIcon/>
 
-                <NewsIcon />
-=======
-                    <PostIcon />
->>>>>>> 288960223776e8a03a9d50fa05fb68ad1b6a269a
+               
                 </a>
                 <a href="/news" className=" flex justify-end align-center">
                     <NewsIcon />
