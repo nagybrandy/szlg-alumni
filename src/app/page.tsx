@@ -8,13 +8,17 @@ import Loading from "./components/Loading";
 
 export default function Home() {
   const [getPosts, { data, isLoading, error }] = useGetPostsMutation();
-  const [fetchedPosts, setFetchedPosts] = useState([]);
+  const [fetchedPosts, setFetchedPosts] = useState<any[]>([]);
 
   useEffect(() => {
     async function fetchPosts() {
       try {
         const result = await getPosts({}).unwrap();
-        setFetchedPosts(result); // Assuming the result contains an array of posts
+
+        // Create a shallow copy of the result array and then sort it
+        const sortedPosts = [...result].sort((a: { date: string }, b: { date: string }) =>  new Date(a.date).getTime() - new Date(b.date).getTime()).reverse();
+
+        setFetchedPosts(sortedPosts);
       } catch (error) {
         console.error("Failed to fetch posts:", error);
       }
@@ -22,11 +26,12 @@ export default function Home() {
 
     fetchPosts();
   }, [getPosts]);
+
   if (error) return <div>Error!</div>;
+
   return (
     <main className="bg-[#3B6F3F] min-w-screen min-h-screen pt-12 overflow-clip overscroll-y-none">
       <div className="h-screen w-screen absolute">
-        <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 z-10 pointer-events-none" />
         <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
       </div>
       <div className="w-8/12 mx-auto bg-[#FCFFF8] h-screen pb-[100px] p-5 rounded-[5em] flex flex-col text-center relative z-0">

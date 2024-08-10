@@ -10,7 +10,6 @@ export default function SearchPage() {
     return (
         <>
             <div className="h-screen w-screen absolute left-0 top-5">
-                <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 z-10 pointer-events-none" />
                 <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
             </div>
             <div className="w-8/12 mx-auto bg-[#FCFFF8] h-screen p-5 rounded-[5em] pb-[200px] mt-32 flex flex-col text-center relative z-0">
