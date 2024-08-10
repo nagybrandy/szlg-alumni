@@ -67,12 +67,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-green-800 overflow-y-clip text-black`}>
-        <div className="circles-container" style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <div className="circles-container z-0 pointer-events-none" style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
           {circles}
         </div>
         <Providers>
           <MenuNSI />
-          <div className="-mt-3 z-[-1]">
+          <div className="-mt-3 z-[9999]">
             {children}
           </div>
         </Providers>
