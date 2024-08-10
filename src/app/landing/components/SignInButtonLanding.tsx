@@ -1,4 +1,4 @@
-import IconContainer from "./IconContainer";
+import IconContainer from "@/app/components/IconContainer";
 
 export const SignInButtonLanding = () => {
     return (
