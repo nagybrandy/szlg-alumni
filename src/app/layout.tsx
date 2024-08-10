@@ -22,12 +22,12 @@ export default function RootLayout({
   // Function to generate a random integer between min and max
   const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-  // Generate 100 circles with random properties
+  // Generate 200 circles with random properties
   const circles = Array.from({ length: 200 }, (_, i) => {
     const size = randomInt(50, 100); // Fixed circle size between 50px and 100px
     const duration = randomInt(20, 60); // Animation duration between 20s and 60s
     const delay = randomInt(0, 30); // Animation delay between 0s and 30s
-    const opacity = Math.random() * 0.7 + 0.3; // Opacity between 0.3 and 1
+    const opacity = 0; // 0 a fade in effect miatt
     const startX = randomInt(-100, 100); // Start position X
     const startY = randomInt(-100, 100); // Start position Y
     const endX = randomInt(-100, 100); // End position X
@@ -50,8 +50,17 @@ export default function RootLayout({
     // Adding keyframes for each circle
     const keyframes = `
       @keyframes move-${i} {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(${endX}vw, ${endY}vh); }
+      0% { 
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: ${Math.random() * 0.7 + 0.3};
+      }
+      100% { 
+        transform: translate(${endX}vw, ${endY}vh);
+        opacity: 0;
+      }
       }
     `;
 
