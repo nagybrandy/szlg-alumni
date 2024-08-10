@@ -55,7 +55,7 @@ export default function ProfilePage() {
             {/* White section with text */}
             <div className="bg-[#FCFFF8] h-32 flex flex-row w-full rounded-2xl relative z-[10]">
                 <div className="w-1/2"></div>
-                <p className="text-justify my-auto w-full pr-16 text-sm text-[#607D8B]">
+                <p className="text-justify m-auto w-full pr-16 text-sm text-[#607D8B]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt varius viverra. Suspendisse auctor lorem id pulvinar convallis. Mauris at blandit eros. Nunc ultrices lorem turpis, et tincidunt mi pharetra non. Integer fermentum mauris ut lacus ullamcorper volutpat. Etiam vel nulla magna. Nam a risus quam. Cras tempor consequat venenatis. Donec mollis iaculis odio,
                 </p>
             </div>
