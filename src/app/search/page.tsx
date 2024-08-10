@@ -31,6 +31,10 @@ export default function SearchPage() {
                         </div>
                     </div>
                 </div>
+                <div className="overflow-y-auto h-full rounded  px-5 py-2.5 mt-5">
+                    <UsersContainer />
+                </div>
+
             </div>
         </>
     )
