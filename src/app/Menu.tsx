@@ -9,6 +9,11 @@ import { LogoutIcon } from "./components/LogoutIcon";
 import Link from "next/link";
 
 export default function Menu() {
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = '/';
+    }
     return (
         <div className="relative z-[9999] w-full p-2 flex items-center bg-[#D2F0CB] px-5 text-green-700 rounded-b-xl">
             <a href="/" className="w-1/3 flex justify-start">
@@ -32,7 +37,9 @@ export default function Menu() {
                 <Link href="/profile">
                     <Avatar img="" />
                 </Link>
-                <LogoutIcon/>
+                <div onClick={handleLogout}>
+                    <LogoutIcon/>
+                </div>
             </div>
 
         </div >
