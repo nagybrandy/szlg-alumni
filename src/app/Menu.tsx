@@ -54,7 +54,6 @@ export default function Menu() {
                 <Link href="/news" className=" flex justify-end align-center">
                     <NewsIcon />
                 </Link>
-                <NotificationsIcon />
                 <Link href="/profile">
                     <Avatar img={profilePicture} />
                 </Link>

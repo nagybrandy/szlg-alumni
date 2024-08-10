@@ -28,7 +28,7 @@ export default function LandingPage() {
           {!localStorage.getItem("token") ? (
 
             <div className="flex space-x-4 z-20 ">
-              <Link href="/auth">
+              <Link href="/register">
                 <SignUpButton />
               </Link>
               <Link href="/auth">
