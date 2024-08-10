@@ -11,6 +11,9 @@ export default function SearchPage() {
                 <div className="w-10/12 rounded bg-[#D2F0CB] px-5 py-2.5 mt-5">
                     <UsersContainer />
                 </div>
+                <svg width="561" height="375" viewBox="0 0 561 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M514.776 187.463C418.001 361.795 199.292 425.26 26.2754 329.216C-146.742 233.172 -208.548 13.9884 -111.774 -160.344C-14.9999 -334.676 203.709 -398.141 376.726 -302.097C549.743 -206.052 611.55 13.131 514.776 187.463Z" fill="#D2F0CB"/>
+                </svg>
                 <div className="w-2/12">
                     <div className="relative inline-block text-left mt-5">
                         <div>
