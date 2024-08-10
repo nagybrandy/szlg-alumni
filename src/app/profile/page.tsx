@@ -13,7 +13,7 @@ export default function ProfilePage() {
             
             {/* Background circles */}
             <div className="h-screen w-screen absolute pt-48 z-[10]">
-                <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 pointer-events-none" />
+                <img src="/circles.svg" className="absolute select-none mix-blend-lighten opacity-100 pointer-events-none" />
             </div>
 
             {/* White section with text */}

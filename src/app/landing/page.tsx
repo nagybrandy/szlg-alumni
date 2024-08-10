@@ -13,7 +13,7 @@ export default function LandingPage() {
           alt="Background circles"
           layout="fill"
           objectFit="cover"
-          className="absolute mix-blend-lighten opacity-25 z-20 pointer-events-none"
+          className="absolute select-none mix-blend-lighten opacity-25 z-20 pointer-events-none"
         />
       </div>
       <div className="w-[75%] bg-[#FCFFF8] absolute top-20 bottom-0 p-5 rounded-3xl flex">

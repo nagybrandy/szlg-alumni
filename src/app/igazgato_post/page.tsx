@@ -59,7 +59,7 @@ function Form({ onSubmit }: FormProps) {
           
     <main className="bg-[#3B6F3F]">
       <div className="h-screen w-screen absolute">
-        <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
+        <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 select-none pointer-events-none" />
       </div>
       
       <div className="w-1/2 h-1/2 absolute top-0 translate-x-1/2 -translate-y-1/2 left-0 opacity-5 bg-[#28B61B] rounded-full mix-blend-darken z-10"></div>
