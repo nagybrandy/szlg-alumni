@@ -4,6 +4,7 @@ import { NotificationsIcon } from "./components/NotificationsIcon";
 import { PeopleIcon } from "./components/PeopleIcon";
 import { SearchIcon } from "./components/SearchIcon";
 import { SearchButton } from "./components/SearchButton";
+import { PostIcon } from "./components/PostIcon";
 
 export default function Menu() {
     return (
@@ -14,12 +15,18 @@ export default function Menu() {
             <a href="/search" className="w-1/3 flex justify-center align-center">
                 <SearchButton />
             </a>
+          
             <div className="w-1/3 flex justify-end items-center space-x-5">
+                <a href="/igazgato_post" className=" flex justify-end align-center">
+                <PostIcon/>
+                <NewsIcon />
+                </a>
                 <NotificationsIcon />
                 <a href="/profile">
                     <Avatar img="" />
                 </a>
             </div>
+
         </div>
 
     );

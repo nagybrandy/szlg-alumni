@@ -14,7 +14,7 @@ export default function User(props: User) {
   const { elem } = props;
 
   return (
-    <div className='rounded-xl text-amber-950 flex items-center py-2.5'>
+    <div className='rounded-xl text-amber-950 flex items-center py-2.5 border-2 shadow-md p-4'>
       <Avatar />
       <div className="ml-1 text-l font-bold">{elem.name ?? "A felhasználó nem adott meg nevet"}</div>
       <div className='ml-1'>{`- ${elem.year ?? "A felhasználó nem adott meg évfolyamot"}, ${elem.class ? `${elem.class} osztály` : "A felhasználó nem adott meg osztályt"} - ${elem.job ?? "A felhasználó nem adott meg állást"}`}</div>

@@ -1,5 +1,8 @@
 "use client"
+import Link from "next/link";
 import { Avatar } from "../components/Avatar";
+import { PostIcon } from "../components/PostIcon";
+import { SearchIcon } from "../components/SearchIcon";
 import UsersContainer from "./components/UsersContainer";
 import React, { useState } from "react"
 
@@ -7,15 +10,21 @@ export default function SearchPage() {
     const [hideFilt, setHideFilt] = useState(true);
     return (
         <>
-            <div className="flex">
-                <div className="w-10/12 rounded bg-[#D2F0CB] px-5 py-2.5 mt-5">
-                    <UsersContainer />
-                </div>
-                <svg width="561" height="375" viewBox="0 0 561 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M514.776 187.463C418.001 361.795 199.292 425.26 26.2754 329.216C-146.742 233.172 -208.548 13.9884 -111.774 -160.344C-14.9999 -334.676 203.709 -398.141 376.726 -302.097C549.743 -206.052 611.55 13.131 514.776 187.463Z" fill="#D2F0CB"/>
-                </svg>
-                <div className="w-2/12">
-                    <div className="relative inline-block text-left mt-5">
+            <div className="h-screen w-screen absolute left-0 top-5">
+                <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
+            </div>
+            <div className="w-8/12 mx-auto bg-[#FCFFF8] h-screen p-5 rounded-[5em] pb-[200px] mt-32 flex flex-col text-center relative z-0">
+                <div className="inline-flex inline-fill">
+                    <input type="text" className="block px-4 py-2 ml-5 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="name-filt" placeholder="Név"></input>
+                    <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="year-filt" placeholder="Évfolyam"></input>
+                    <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="class-filt" placeholder="Osztály"></input>
+                    <input type="text" className="block px-4 py-2 ml-3 border-2 text-sm text-gray-700 w-44 rounded-xl" role="menuitem" id="job-filt" placeholder="Állás"></input>
+                    <div className="ml-3 mt-3">
+                        <Link href="">
+                            <SearchIcon />
+                        </Link>
+                    </div>
+                    {/* <div className="relative inline-block text-left mt-5 ml-2">
                         <div>
                             <button onClick={() => setHideFilt(!hideFilt)} type="button" className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
                                 Szűrő
@@ -24,16 +33,20 @@ export default function SearchPage() {
                                 </svg>
                             </button>
                         </div>
-                        <div hidden={hideFilt} className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" id="filters-container">
+                        <div hidden={hideFilt} className="absolute left-0 z-10 mt-2 w-52 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" id="filters-container">
                             <div className="py-1" role="none">
-                                <input type="text" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="name-filt" placeholder="Név"></input>
-                                <input type="text" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="year-filt" placeholder="Kezdő év"></input>
-                                <input type="text" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="class-filt" placeholder="Osztály"></input>
-                                <input type="text" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="job-filt" placeholder="Állás"></input>
+                                <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-52" role="menuitem" id="name-filt" placeholder="Név"></input>
+                                <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-52" role="menuitem" id="year-filt" placeholder="Kezdő év"></input>
+                                <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-52" role="menuitem" id="class-filt" placeholder="Osztály"></input>
+                                <input type="text" className="block px-4 py-2 text-sm text-gray-700 w-52" role="menuitem" id="job-filt" placeholder="Állás"></input>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
+                <div className="overflow-y-auto h-full rounded  px-5 py-2.5 mt-5">
+                    <UsersContainer />
+                </div>
+
             </div>
         </>
     )

@@ -34,7 +34,6 @@ export default function ProfilePage() {
                 </div>
             {/* Background circles */}
             <div className="h-screen w-screen absolute pt-48 z-[10]">
-                <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 pointer-events-none" />
                 <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 pointer-events-none" />
             </div>
 
