@@ -25,11 +25,11 @@ export default function UsersContainer() {
             year: "1900-1904",
             class: "D",
             job: "Job4",
-        }
+        },{},{},{},{},{},{},{},{}
     ];
     return (
         <div>
-            {userData.map((person) => <User elem = {person} />)}
+            {userData.map((person, index) => <User elem = {person} key = {index}/>)}
         </div>
     );
 }
