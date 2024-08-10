@@ -31,13 +31,18 @@ function Form({ onSubmit }: FormProps) {
 
 
   return (
-    <main className="Igazgato_post">
-
+    <main className="bg-[#3B6F3F]">
+      <div className="h-screen w-screen absolute">
+        <img src="/circles.svg" className="absolute mix-blend-darken opacity-75 z-10 pointer-events-none" />
+        <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 pointer-events-none" />
+      </div>
       
+      <div className="w-1/2 h-1/2 absolute top-0 translate-x-1/2 -translate-y-1/2 left-0 opacity-5 bg-[#28B61B] rounded-full mix-blend-darken z-10"></div>
+
       <form  onSubmit={handleSubmit}>
 
 
-        <div className="bg-green-50 m-10 pb-[120px] py-5 rounded-[73px]  w-6/12 mx-auto   px-20 justify-center items-center "   >
+        <div className="bg-[#FCFFF8] m-10 pb-[120px] py-5 rounded-[73px]  w-6/12 mx-auto   px-20 justify-center items-center "   >
 
           <h1 className="text-2xl text-center p-5  text-green-800 font-sans font-extrabold ">Post feltöltése</h1>
 
