@@ -24,7 +24,7 @@ export function SimpleRegistrationForm() {
             dispatch(login({ "token": response.token }));
             
             // Redirect to the main page after successful login
-            window.location.href = '/';  // Use window.location.href for client-side redirection
+            window.location.href = '/news';  // Use window.location.href for client-side redirection
 
         } catch (error) {
             // Handle login error
