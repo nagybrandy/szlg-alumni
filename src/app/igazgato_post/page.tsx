@@ -4,10 +4,6 @@ import React from "react";
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { useCreatePostMutation } from "@/store/services/apiSlice"; // Import the mutation hook
 
-interface FormProps {
-  onSubmit: (data: FormData) => void;
-}
-
 interface FormData {
   postcim: string;
   postleiras: string;
@@ -15,7 +11,7 @@ interface FormData {
   type: string;
 }
 
-function Page({ onSubmit }: FormProps) {
+function Page() {
   const [formData, setFormData] = useState<FormData>({
     postcim: '',
     postleiras: '',
@@ -46,14 +42,14 @@ function Page({ onSubmit }: FormProps) {
     try {
       const result = await createPost(postData).unwrap();
       console.log("Post created successfully:", result);
-      onSubmit(formData); // Optional: Call parent onSubmit if needed
+      // You can handle post-submit actions here if needed
     } catch (error) {
       console.error("Failed to create post:", error);
     }
   }
 
   return (
-    <main className="bg-green-800]">
+    <main className="bg-green-800">
       <div className="h-screen w-screen absolute">
         <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 select-none pointer-events-none" />
       </div>
@@ -140,11 +136,6 @@ function Page({ onSubmit }: FormProps) {
         </div>
       </form>
     </main>
-
-
-
-  
-
   );
 }
 
