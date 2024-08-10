@@ -9,7 +9,7 @@ import { useEffect } from "react";
 export default function AuthPage() {
   return (
     <main className="bg-green-900 w-full h-dvh flex justify-center items-center">
-        <svg className="w-full h-dvh absolute mix-blend-darken" viewBox="0 0 1300 864" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-full h-dvh absolute mix-blend-darken pointer-events-none" viewBox="0 0 1300 864" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M129 64.5C129 100.122 100.122 129 64.5 129C28.8776 129 0 100.122 0 64.5C0 28.8776 28.8776 0 64.5 0C100.122 0 129 28.8776 129 64.5Z" fill="#AAD698" fill-opacity="0.4"/>
         <path d="M129 64.5C129 100.122 100.122 129 64.5 129C28.8776 129 0 100.122 0 64.5C0 28.8776 28.8776 0 64.5 0C100.122 0 129 28.8776 129 64.5Z" fill="#AAD698" fill-opacity="0.4"/>
         <path d="M129 64.5C129 100.122 100.122 129 64.5 129C28.8776 129 0 100.122 0 64.5C0 28.8776 28.8776 0 64.5 0C100.122 0 129 28.8776 129 64.5Z" fill="#AAD698" fill-opacity="0.4"/>
@@ -33,10 +33,10 @@ export default function AuthPage() {
         </div>
         <div className="w-full h-full bg-white text-black rounded-r-[inherit]">
           <div className="flex flex-col relative justify-center items-center w-full h-full">
-            <div className="w-full h-full absolute top-0 overflow-hidden rounded-tr-[73px]">
+            <div className="w-full h-full absolute top-0 overflow-hidden rounded-tr-[73px] pointer-events-none">
               <div className="size-full rounded-full absolute flex flex-col justify-center items-center -translate-y-2/3 bg-green-800/30">
                 <div className="w-full h-2/3"></div>
-                <img src="/logo.svg" alt="Logo" className="size-1/4" />
+                <img src="/logo.svg" alt="Logo" className="size-1/4 select-none" />
               </div>
             </div>
             <Typography variant="h1" className="text-[#4E4E4E]  text-[50px] text-center">
