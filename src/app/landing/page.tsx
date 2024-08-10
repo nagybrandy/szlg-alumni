@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { SignUpButton } from "../components/SignUpButton";
-import { SignInButtonLanding } from "../components/SignInButtonLanding";
+import { SignInButtonLanding } from "./components/SignInButtonLanding";
 import Link from "next/link";
 
 export default function LandingPage() {
