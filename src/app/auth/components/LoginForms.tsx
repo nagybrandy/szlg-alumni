@@ -3,26 +3,35 @@ import { Typography, Input, Button } from "@material-tailwind/react";
 import { useAuthTokenMutation } from "@/store/services/apiSlice";
 import { useDispatch } from 'react-redux';
 import { login } from '@/store/services/authSlice';
+import Loading from '@/app/components/Loading';
 
 export function SimpleRegistrationForm() {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const dispatch = useDispatch<AppDispatch>();
 
-    const [authToken, { data, error }] = useAuthTokenMutation();
+    const [authToken, { data, error, isLoading }] = useAuthTokenMutation();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+       
         try {
             const credentials = { username, password };
             const response = await authToken(credentials).unwrap();
-            dispatch(login(response.token)); // Assuming `login` is an action that expects a string token
+            
+            console.log(response.token);
+            
+            dispatch(login({ "token": response.token }));
+            
+            // Redirect to the main page after successful login
+            window.location.href = '/';  // Use window.location.href for client-side redirection
+
         } catch (error) {
             // Handle login error
             console.error("Login failed:", error);
         }
     };
-
+    if(isLoading) return <Loading />;
     return (
         <form
             className="flex flex-col justify-center items-center w-full h-full gap-y-4"
@@ -46,14 +55,14 @@ export function SimpleRegistrationForm() {
                     onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
-                <Button
-                    color="green"
-                    variant="gradient"
-                    className="w-4/5"
-                    type="submit"
-                >
-                    Bejelentkezés
-                </Button>
+            <Button
+                color="green"
+                variant="gradient"
+                className="w-4/5"
+                type="submit"
+            >
+                Bejelentkezés
+            </Button>
         </form>
     );
 }

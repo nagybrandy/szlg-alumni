@@ -5,6 +5,8 @@ import Menu from "./Menu";
 import Providers from "./Providers";
 import React from "react";
 import MenuNSI from "./MenuNSI";
+import { useSelector } from "react-redux";
+import MenuChanger from "./components/MenuChanger";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   
+
   // Function to generate a random integer between min and max
   const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -71,7 +74,8 @@ export default function RootLayout({
           {circles}
         </div>
         <Providers>
-          <MenuNSI />
+          {/* Conditionally render Menu or MenuNSI based on login state */}
+          <MenuChanger />
           <div className="-mt-3 z-[9999]">
             {children}
           </div>
