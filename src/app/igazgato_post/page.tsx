@@ -57,7 +57,7 @@ function Form({ onSubmit }: FormProps) {
  
       
           
-    <main className="bg-[#3B6F3F]">
+    <main className="bg-green-800]">
       <div className="h-screen w-screen absolute">
         <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 select-none pointer-events-none" />
       </div>
