@@ -9,12 +9,11 @@ import { PostIcon } from "./components/PostIcon";
 import { LogoutIcon } from "./components/LogoutIcon";
 import Link from "next/link";
 import { useGetMeMutation } from "@/store/services/apiSlice";
-import { useRouter } from "next/router";
 
 export default function Menu() {
     const [getMe, { data, isLoading, error }] = useGetMeMutation();
     const [profilePicture, setProfilePicture] = useState<string>("");
-    const router = useRouter()
+
     useEffect(() => {
         const fetchProfilePicture = async () => {
             try {
@@ -36,7 +35,7 @@ export default function Menu() {
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('isLoggedIn');
-        router.push('/')
+        window.location.href = '/';
     };
 
     return (
