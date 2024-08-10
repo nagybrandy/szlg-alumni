@@ -21,14 +21,14 @@ export default function UsersContainer() {
             job: "Job3",
         },
         {
-            name: "Gipsz4",
+            name: "Gipsz4aaaaa",
             year: "1900-1904",
             class: "D",
             job: "Job4",
-        },{},{},{},{},{},{},{},{}
+        },{},{},{},{},{},{},{name: "Gipsz4aaaaa",},{name: "Gipsz4aaaaa",}
     ];
     return (
-        <div>
+        <div className="flex flex-col space-y-3">
             {userData.map((person, index) => <User elem = {person} key = {index}/>)}
         </div>
     );
