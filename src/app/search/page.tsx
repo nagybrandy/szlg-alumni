@@ -5,6 +5,7 @@ import { PostIcon } from "../components/PostIcon";
 import { SearchIcon } from "../components/SearchIcon";
 import UsersContainer from "./components/UsersContainer";
 import React, { useState } from "react"
+import { SearchButtonSearch } from "./components/SearchButtonSearch";
 
 export default function SearchPage() {
     const [hideFilt, setHideFilt] = useState(true);
@@ -42,12 +43,12 @@ export default function SearchPage() {
                             </div>
                         </div>
                     </div> */}
-                </div>
-                <div className="overflow-y-auto h-full rounded  px-5 py-2.5 mt-5">
-                    <UsersContainer />
-                </div>
+                        </div>
+                        <div className="overflow-y-auto h-full rounded  px-5 py-2.5 mt-5">
+                            <UsersContainer />
+                        </div>
 
-            </div>
-        </>
-    )
+                    </div>
+                </>
+                )
 }
