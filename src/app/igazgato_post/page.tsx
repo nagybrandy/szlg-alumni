@@ -15,7 +15,7 @@ interface FormData {
   type: string;
 }
 
-function Form({ onSubmit }: FormProps) {
+function Page({ onSubmit }: FormProps) {
   const [formData, setFormData] = useState<FormData>({
     postcim: '',
     postleiras: '',
@@ -53,10 +53,6 @@ function Form({ onSubmit }: FormProps) {
   }
 
   return (
-
- 
-      
-          
     <main className="bg-green-800]">
       <div className="h-screen w-screen absolute">
         <img src="/circles.svg" className="absolute mix-blend-lighten opacity-100 z-10 select-none pointer-events-none" />
@@ -152,4 +148,4 @@ function Form({ onSubmit }: FormProps) {
   );
 }
 
-export default Form;
+export default Page;
