@@ -4,6 +4,7 @@ import { useAuthTokenMutation } from "@/store/services/apiSlice";
 import { useDispatch } from 'react-redux';
 import { login } from '@/store/services/authSlice';
 import Loading from '@/app/components/Loading';
+import { AppDispatch } from '@/store/store';
 
 export function SimpleRegistrationForm() {
     const [username, setUsername] = useState<string>("");
